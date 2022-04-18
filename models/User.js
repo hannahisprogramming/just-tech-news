@@ -1,4 +1,4 @@
-const {Model, Datatypes} = require('sequelize');
+const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
 //create user model
@@ -10,17 +10,17 @@ User.init(
     //table column definitions
     //define id column
     id: {
-      type:Datatypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
     username: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false
     },
     email: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       unique: true,
       validate: {
@@ -28,7 +28,7 @@ User.init(
       }
     },
     password: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         //at least 4 chars long
