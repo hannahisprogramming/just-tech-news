@@ -1,4 +1,3 @@
-const { monitorEventLoopDelay } = require('perf_hooks');
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
